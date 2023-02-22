@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dakshesh Enterprise</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Dakshesh Enterprise</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="banner">
+        <h2>Welcome to Dakshesh Enterprise</h2>
+        <p>Your one-stop solution for office and stationary needs</p>
+        <a href="#" class="button">Shop Now</a>
+      </section>
+      <section id="products">
+        <h2>Our Products</h2>
+        <div class="product">
+          <img src="pen.jpg">
+          <h3>Ballpoint Pen</h3>
+          <p>$2.99</p>
+          <button onclick="addToCart('Ballpoint Pen', 2.99)">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="notebook.jpg" alt="Notebook">
+          <h3>Wire-bound Notebook</h3>
+          <p>$4.99</p>
+          <button onclick="addToCart('Wire-bound Notebook', 4.99)">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="stapler.jpg" alt="Stapler">
+          <h3>Stapler</h3>
+          <p>$7.99</p>
+          <button onclick="addToCart('Stapler', 7.99)">Add to Cart</button>
+        </div>
+      </section>
+      <section id="about">
+        <h2>About Us</h2>
+        <p>Dakshesh Enterprise has been serving customers for over 10 years, providing high-quality office and stationary supplies at affordable prices.</p>
+      </section>
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+          <label for="message">Message</label>
+          <textarea id="message" name="message"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Dakshesh Enterprise</p>
+    </footer>
+
+    <script>
+      let cart = [];
+
+      function addToCart(itemName, itemPrice) {
+        cart.push({ name: itemName, price: itemPrice });
+        console.log('Added to cart:', itemName, itemPrice);
+        console.log('Current cart:', cart);
+      }
+    </script>
+  </body>
+</html>
